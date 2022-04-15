@@ -1,0 +1,40 @@
+[
+  {
+    "text": "Github",
+    "key": "github",
+    "href": "https://github.com/dartilesm",
+    "icon": "SiGithub",
+    "primary": true
+  },
+  {
+    "text": "LinkedIn",
+    "key": "linkedin",
+    "href": "https://linkedin.com/in/dartiles/",
+    "icon": "FaLinkedinIn",
+    "primary": true
+  },
+  {
+    "text": "CV",
+    "key": "cv",
+    "href": "https://dartiles.me/cv.pdf",
+    "icon": "IoDocumentOutline"
+  },
+  {
+    "text": "Portafolio - Como empecé, historia, tecnologías, proyectos...",
+    "key": "portfolio",
+    "href": "https://dartiles.me",
+    "icon": "FiLink"
+  },
+  {
+    "text": "Blog",
+    "key": "blog",
+    "href": "https://dartiles.dev",
+    "icon": "FiLink"
+  },
+  {
+    "text": "Platzi",
+    "key": "platzi",
+    "href": "https://platzi.com/p/dartiles",
+    "icon": "SiPlatzi"
+  }
+]
