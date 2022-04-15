@@ -1,5 +1,12 @@
 [
   {
+    "text": "Mail",
+    "key": "mail",
+    "href": "mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.link",
+    "icon": "IoMdMail",
+    "primary": true
+  },
+  {
     "text": "Github",
     "key": "github",
     "href": "https://github.com/dartilesm",
@@ -11,6 +18,13 @@
     "key": "linkedin",
     "href": "https://linkedin.com/in/dartiles/",
     "icon": "FaLinkedinIn",
+    "primary": true
+  },
+  {
+    "text": "Twitter",
+    "key": "twitter",
+    "href": "https://twitter.com/intent/follow?screen_name=dartilesm",
+    "icon": "SiTwitter",
     "primary": true
   },
   {
