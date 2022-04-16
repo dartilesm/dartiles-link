@@ -24,7 +24,7 @@ function LinkList({ links }) {
                     {
                         links
                             .filter(link => !link.primary)
-                            .map(link => <Link text={link.text} href={link.href} key={link.key} primary={link.primary} Icon={Icons[link.icon]} />)
+                            .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
                     }
             </Container>
         }
@@ -33,7 +33,7 @@ function LinkList({ links }) {
                     {
                         links
                             .filter(link => link.primary)
-                            .map(link => <Link text={link.text} href={link.href} key={link.key} primary={link.primary} Icon={Icons[link.icon]} />)
+                            .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
                     }
             </Container>
         }
