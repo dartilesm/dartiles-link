@@ -1,6 +1,5 @@
-import { Container, Image, Text } from '@nextui-org/react';
+import { Container, Image } from '@nextui-org/react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 import LinkList from '../components/link/LinkList';
 import styles from '../styles/Home.module.css';
 
