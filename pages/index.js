@@ -1,8 +1,8 @@
 import { Container, Image } from '@nextui-org/react';
+import absoluteUrl from 'next-absolute-url';
 import Head from 'next/head';
 import LinkList from '../components/link/LinkList';
 import styles from '../styles/Home.module.css';
-import absoluteUrl from 'next-absolute-url'
 
 function Home({ links }) {
   return (
