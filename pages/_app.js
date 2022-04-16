@@ -17,7 +17,7 @@ const darkTheme = createTheme({
   theme: { 
     colors: {
       bodyBackground: '#121212',
-      cardBackground: '#1c1c1c',
+      cardBackground: 'rgba(30, 43, 166, .5)',
       primaryCard: '#1526c7'
     }
   }
