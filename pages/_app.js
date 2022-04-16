@@ -19,7 +19,8 @@ const darkTheme = createTheme({
     colors: {
       bodyBackground: '#121212',
       cardBackground: '#1c1c1c',
-      primaryCard: 'rgba(30, 43, 166, .5)'
+      primaryCard: 'rgba(30, 43, 166, .5)',
+      border: '#202020'
     }
   }
 })
