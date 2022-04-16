@@ -23,7 +23,7 @@ function Home({ links }) {
   )
 }
 export async function getServerSideProps({ req }) {
-  console.log({ referer: req.headers.referer })
+  console.log({ headers: req.headers })
   const res = await fetch(`${req.headers.referer}api/links`)
   const data = await res.json()
 
