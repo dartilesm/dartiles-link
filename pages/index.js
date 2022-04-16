@@ -4,18 +4,7 @@ import { useEffect, useState } from 'react';
 import LinkList from '../components/link/LinkList';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
-  const [links, setLinks] = useState([])
-  useEffect(() => {
-    getLinks()
-  }, [])
-
-  async function getLinks() {
-    const data = await fetch('/api/links')
-    const response = await data.json()
-    setLinks(response)
-  }
-  
+function Home({ links }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -33,3 +22,12 @@ export default function Home() {
     </div>
   )
 }
+export async function getServerSideProps({ req }) {
+  console.log({ headers: req.headers })
+  const res = await fetch(`https://${req.headers.host}/api/links`)
+  const data = await res.json()
+
+  return { props: { links: data } }
+}
+
+export default Home
