@@ -24,7 +24,7 @@ function Home({ links }) {
 }
 export async function getServerSideProps({ req }) {
   console.log({ headers: req.headers })
-  const res = await fetch(`${req.headers.referer}api/links`)
+  const res = await fetch(`https://${req.headers.host}/api/links`)
   const data = await res.json()
 
   return { props: { links: data } }
