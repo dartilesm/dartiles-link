@@ -38,7 +38,7 @@ function Home({ links, origin }) {
         >
           <Avatar
             alt='diego face'
-            src='https://dartiles.me/static/media/me.10078b41.png'
+            src='/me.png'
             bordered
             css={{
               margin: "$0",
