@@ -24,6 +24,7 @@ function Home({ links, origin }) {
         <meta property="twitter:title" content="Diego Artiles - Centro de Enlaces" />
         <meta property="twitter:description" content="Redes sociales, portafolio, blog, curriculum, plataformas educativas, mail y más." />
         <meta property="twitter:image" content="https://dartiles.link/cover.png" />
+        <script defer data-domain="dartiles.link" src="https://plausible.io/js/plausible.js"></script>
       </Head>
 
       <main className={styles.main}>
