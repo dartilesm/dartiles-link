@@ -11,8 +11,8 @@ function Home({ links, origin }) {
         <title>Diego Artiles - Centro de Enlaces</title>
         <meta name="title" content="Diego Artiles - Centro de Enlaces" />
         <meta name="description" content="Todos los enlaces de Diego Artiles en un solo lugar. Redes sociales, portafolio, blog, curriculum, plataformas educativas, mail y más." />
-        <link rel='icon' href='/favicon.png' />
-        
+        <link rel='icon' href={`${origin}/favicon.png`} />
+
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${origin}`} />
         <meta property="og:title" content="Diego Artiles - Centro de Enlaces" />
