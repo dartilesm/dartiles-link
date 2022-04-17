@@ -2,10 +2,12 @@ import { Container, Link as NextUILink, StyledCard, Text, useTheme } from '@next
 import { IconContext } from 'react-icons'
 import { FiExternalLink } from 'react-icons/fi'
 import { useEffect, useState } from 'react'
+import { usePlausible } from 'next-plausible'
 
 function Link({ text, slug, primary, highlight, Icon }) {
     const { theme } = useTheme()
     const [origin, setOrigin] = useState(null)
+    const plausible = usePlausible()
 
     useEffect(() => {
         setOrigin(location.origin)
@@ -16,6 +18,7 @@ function Link({ text, slug, primary, highlight, Icon }) {
         href={`${origin}/${slug}`}
         target='_blank'
         css={{ width: "100%", maxWidth: primary ? 35 : 400, color: "$black" }}
+        onClick={() => plausible('buttonClick', { props: { ref: slug }})}
       >
         {primary ? (
           <IconContext.Provider value={{ size: "1.4rem", color: theme.colors.text.value }}>

@@ -1,4 +1,5 @@
 import { createTheme, NextUIProvider, globalCss } from '@nextui-org/react';
+import PlausibleProvider from 'next-plausible';
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import '../styles/globals.css'
 
@@ -36,18 +37,20 @@ const globalStyles = globalCss({
 
 function MyApp({ Component, pageProps }) {
   globalStyles()
-  return <NextThemesProvider
-        defaultTheme="system"
-        attribute="class"
-        value={{
-          light: lightTheme.className,
-          dark: darkTheme.className
-        }}
-      >
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
-  </NextThemesProvider>
+  return <PlausibleProvider domain='dartiles.link' trackOutboundLinks enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'}>
+      <NextThemesProvider
+          defaultTheme="system"
+          attribute="class"
+          value={{
+            light: lightTheme.className,
+            dark: darkTheme.className
+          }}
+        >
+        <NextUIProvider>
+          <Component {...pageProps} />
+        </NextUIProvider>
+    </NextThemesProvider>
+  </PlausibleProvider>
 }
 
 export default MyApp
