@@ -4,21 +4,33 @@ import '../styles/globals.css'
 
 const lightTheme = createTheme({
   type: 'light',
-  theme: { }
+  theme: { 
+    colors: {
+      bodyBackground: '#f3f3f3',
+      cardBackground: '#fbfbfb',
+      primaryCard: 'rgba(21, 38, 199, .21)'
+    }
+  }
 })
 
 const darkTheme = createTheme({
   type: 'dark',
   theme: { 
     colors: {
-      background: '#121212'
+      bodyBackground: '#121212',
+      cardBackground: '#1c1c1c',
+      primaryCard: 'rgba(30, 43, 166, .5)',
+      border: '#202020'
     }
   }
 })
 
 const globalStyles = globalCss({
+  ['.light-theme body']: {
+    backgroundColor: lightTheme.colors.bodyBackground.value
+  },
   ['.dark-theme body']: {
-    backgroundColor: darkTheme.colors.background.value
+    backgroundColor: darkTheme.colors.bodyBackground.value
   }
 })
 

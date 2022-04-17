@@ -6,7 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return links.map(link => ({
-      source: `/${link.key}`,
+      source: `/${link.slug}`,
       destination: link.href,
       permanent: true
     }))
