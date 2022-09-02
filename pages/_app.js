@@ -1,11 +1,12 @@
 import { createTheme, NextUIProvider, globalCss } from '@nextui-org/react';
 import PlausibleProvider from 'next-plausible';
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { I18NProvider } from '../context/i18n';
 import '../styles/globals.css'
 
 const lightTheme = createTheme({
   type: 'light',
-  theme: { 
+  theme: {
     colors: {
       bodyBackground: '#f3f3f3',
       cardBackground: '#fbfbfb',
@@ -16,7 +17,7 @@ const lightTheme = createTheme({
 
 const darkTheme = createTheme({
   type: 'dark',
-  theme: { 
+  theme: {
     colors: {
       bodyBackground: '#121212',
       cardBackground: '#1c1c1c',
@@ -38,17 +39,19 @@ const globalStyles = globalCss({
 function MyApp({ Component, pageProps }) {
   globalStyles()
   return <PlausibleProvider domain='dartiles.link' trackOutboundLinks enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'}>
-      <NextThemesProvider
-          defaultTheme="system"
-          attribute="class"
-          value={{
-            light: lightTheme.className,
-            dark: darkTheme.className
-          }}
-        >
-        <NextUIProvider>
+    <NextThemesProvider
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className
+      }}
+    >
+      <NextUIProvider>
+        <I18NProvider>
           <Component {...pageProps} />
-        </NextUIProvider>
+        </I18NProvider>
+      </NextUIProvider>
     </NextThemesProvider>
   </PlausibleProvider>
 }

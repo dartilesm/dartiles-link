@@ -28,14 +28,14 @@
     "primary": true
   },
   {
-    "text": "CV",
+    "text": "Resume",
     "slug": "cv",
     "href": "https://dartiles.me/cv.pdf",
     "icon": "FiLink",
     "highlight": true
   },
   {
-    "text": "Portafolio",
+    "text": "Portfolio",
     "slug": "portfolio",
     "href": "https://dartiles.me",
     "icon": "FiLink",

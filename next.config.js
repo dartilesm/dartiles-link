@@ -3,6 +3,10 @@
 const links = require('./links.json')
 
 const nextConfig = {
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en'
+  },
   reactStrictMode: true,
   async redirects() {
     return links.map(link => ({
