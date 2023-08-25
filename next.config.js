@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
+const { withPlausibleProxy } = require('next-plausible')
 
 const links = require('./links.json')
 
-const nextConfig = {
-  i18n: {
-    locales: ['en', 'es'],
-    defaultLocale: 'en'
-  },
+const nextConfig = withPlausibleProxy()({
   reactStrictMode: true,
   async redirects() {
     return links.map(link => ({
@@ -15,6 +12,6 @@ const nextConfig = {
       permanent: true
     }))
   }
-}
+})
 
 module.exports = nextConfig

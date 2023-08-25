@@ -17,24 +17,24 @@ const Icons = {
 }
 
 function LinkList({ links }) {
-    
+
     return <>
         {
-            links.some(link => !link.primary) && <Container css={{ display: 'flex', flexDirection: 'column', gap: '$6', maxWidth: 400}}>
-                    {
-                        links
-                            .filter(link => !link.primary)
-                            .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
-                    }
+            links.some(link => !link.primary) && <Container css={{ display: 'flex', flexDirection: 'column', gap: '$6', maxWidth: 400 }}>
+                {
+                    links
+                        .filter(link => !link.primary)
+                        .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
+                }
             </Container>
         }
         {
             links.some(link => link.primary) && <Container css={{ display: 'flex', flexDirection: 'row', maxWidth: 400, margin: '1rem 0', justifyContent: 'center', columnGap: '$6' }}>
-                    {
-                        links
-                            .filter(link => link.primary)
-                            .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
-                    }
+                {
+                    links
+                        .filter(link => link.primary)
+                        .map(link => <Link {...link} key={link.slug} Icon={Icons[link.icon]} />)
+                }
             </Container>
         }
     </>

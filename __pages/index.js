@@ -1,4 +1,4 @@
-import { Avatar, Container, Image, StyledAvatar, StyledImage, Text } from "@nextui-org/react";
+import { Avatar, Container, StyledImage, Text } from "@nextui-org/react";
 import absoluteUrl from "next-absolute-url";
 import Head from "next/head";
 import LinkList from "../components/link/LinkList";
@@ -6,26 +6,25 @@ import { useI18N } from "../context/i18n";
 import styles from "../styles/Home.module.css";
 
 function Home({ links, origin }) {
-  const { t } = useI18N()
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>{`Diego Artiles - ${t('PAGE_TITLE')}`}</title>
-        <meta name="title" content={`Diego Artiles - ${t('PAGE_TITLE')}`} />
-        <meta name="description" content={t('PAGE_DESCRIPTION')} />
+        <title>{`Diego Artiles - Links Center`}</title>
+        <meta name="title" content={`Diego Artiles - Links Center`} />
+        <meta name="description" content="Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more." />
         <link rel='icon' href="https://dartiles.link/favicon.png" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dartiles.link" />
-        <meta property="og:title" content={`Diego Artiles - ${t('PAGE_TITLE')}`} />
-        <meta property="og:description" content={t('PAGE_DESCRIPTION')} />
+        <meta property="og:title" content={`Diego Artiles - Links Center`} />
+        <meta property="og:description" content="Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more." />
         <meta property="og:image" content="https://dartiles.link/cover.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dartiles.link" />
-        <meta property="twitter:title" content={`Diego Artiles - ${t('PAGE_TITLE')}`} />
-        <meta property="twitter:description" content={t('PAGE_DESCRIPTION')} />
+        <meta property="twitter:title" content={`Diego Artiles - Links Center`} />
+        <meta property="twitter:description" content="Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more." />
         <meta property="twitter:image" content="https://dartiles.link/cover.png" />
       </Head>
 
@@ -70,7 +69,7 @@ function Home({ links, origin }) {
           />
         </Container>
         <Text h2 css={{ margin: "$10 $0" }}>
-          {t('PAGE_TITLE')}
+          {'Links Center'}
         </Text>
         <LinkList links={links} />
       </main>
