@@ -4,7 +4,7 @@ import * as GrommetIcons from "react-icons/gr";
 import * as Ionic4Icons from "react-icons/io";
 import * as Ionic5Icons from "react-icons/io5";
 import * as SimpleIcons from "react-icons/si";
-import Link from "./Link";
+import Link from "./link";
 
 const Icons = {
   ...SimpleIcons,

@@ -3,5 +3,8 @@
     "eslint:recommended",
     "next",
     "airbnb-standard"
-  ]
+  ],
+  "rules": {
+    "react/prefer-stateless-function": "off"
+  }
 }

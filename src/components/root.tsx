@@ -1,9 +1,8 @@
 "use client";
 
 import { Avatar, Image } from "@nextui-org/react";
-import LinkList from "./link/LinkList";
 import { useTheme } from "next-themes";
-import clsx from "clsx";
+import LinkList from "./link/link-list";
 
 export default function RootComponent({ links }) {
   const { resolvedTheme } = useTheme();

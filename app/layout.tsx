@@ -8,6 +8,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <PlausibleProvider
+          children={null}
           domain="dartiles.link"
           trackOutboundLinks
           enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === "production"}
