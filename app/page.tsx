@@ -33,8 +33,15 @@ export const metadata: Metadata = {
 };
 
 async function getData () {
+  console.log({
+    url: getAbsoluteUrl('links')
+  });
   const res = await fetch(getAbsoluteUrl('links'));
   const data = await res.json();
+
+  console.log({
+    data
+  });
 
   return data;
 }

@@ -1,17 +1,17 @@
 /** @type {import('next').NextConfig} */
-const { withPlausibleProxy } = require('next-plausible')
+const { withPlausibleProxy } = require('next-plausible');
 
-const links = require('./links.json')
+const links = require('./src/data/links.json');
 
 const nextConfig = withPlausibleProxy()({
   reactStrictMode: true,
-  async redirects() {
+  async redirects () {
     return links.map(link => ({
       source: `/${link.slug}`,
       destination: link.href,
       permanent: true
-    }))
+    }));
   }
-})
+});
 
-module.exports = nextConfig
+module.exports = nextConfig;
