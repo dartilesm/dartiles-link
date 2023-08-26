@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: `Diego Artiles - Links Center`,
   description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
   icons: {
-    icon: 'favicon.png'
+    icon: 'favicon.webp'
   },
   openGraph: {
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: 'cover.png'
+        url: 'cover.webp'
       }
     ]
   },
@@ -29,22 +29,15 @@ export const metadata: Metadata = {
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: 'cover.png'
+        url: 'cover.webp'
       }
     ]
   }
 };
 
 async function getData () {
-  console.log({
-    url: getAbsoluteUrl('links')
-  });
   const res = await fetch(getAbsoluteUrl('links'));
   const data = await res.json();
-
-  console.log({
-    data
-  });
 
   return data;
 }
