@@ -2,16 +2,17 @@
     "editor.formatOnSave": true,
     "[typescriptreact]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[javascriptreact]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "eslint.codeActionsOnSave.mode": "all",
     "eslint.workingDirectories": [
         {
             "mode": "auto"
         }
-    ]
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

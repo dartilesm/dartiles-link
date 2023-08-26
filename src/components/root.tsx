@@ -1,12 +1,10 @@
-"use client";
+'use client';
 
-import { Avatar, Image } from "@nextui-org/react";
-import { useTheme } from "next-themes";
-import LinkList from "./link/link-list";
+import { Avatar, Image } from '@nextui-org/react';
+import { Link } from '../types/link.ts';
+import LinkList from './link/link-list.tsx';
 
-export default function RootComponent({ links }) {
-  const { resolvedTheme } = useTheme();
-
+export default function RootComponent ({ links } : { links: Link[] }) {
   return (
     <div className="min-h-screen flex-1 flex flex-col justify-center items-center px-0 py-16 gap-6">
       <div className="relative my-8 mx-0 flex justify-center items-center">
@@ -15,9 +13,7 @@ export default function RootComponent({ links }) {
           alt="dartiles logo"
           src="/logo.png"
           removeWrapper
-          className={
-            "absolute m-0 z-50 -bottom-4 p-2 rounded-full w-10 h-10 bg-white border-2 border-solid"
-          }
+          className="absolute m-0 z-50 -bottom-4 p-2 rounded-full w-10 h-10 bg-white border-2 border-solid"
         />
       </div>
       <div className="flex gap-2 flex-col ">
@@ -25,26 +21,6 @@ export default function RootComponent({ links }) {
         <h2 className="text-lg text-center">Frontend Developer</h2>
       </div>
       <LinkList links={links} />
-      {/*   <div className="flex flex-col max-w-sm w-full p-4">
-        <Button
-          as={Link}
-          href="https://dartiles.me"
-          className="font-medium dark:bg-[#1c1c1c] flex flex-row justify-between"
-          size="lg"
-          fullWidth
-          endContent={
-            <span className="inline-flex flex-row gap-2 items-center">
-              <IoStar color="#ff8e00" size={20} />
-              <FiExternalLink size={18} />
-            </span>
-          }
-        >
-          <span className="inline-flex flex-row items-center gap-4">
-            <FiLink size={20} />
-            Resume
-          </span>
-        </Button>
-      </div> */}
     </div>
   );
 }

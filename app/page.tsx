@@ -1,46 +1,46 @@
-import { Avatar, Image } from "@nextui-org/react";
-import { Metadata } from "next";
-import RootComponent from "../src/components/root";
+import { Metadata } from 'next';
+import RootComponent from '../src/components/root.tsx';
+import getAbsoluteUrl from '../src/utils/get-absolute-url.ts';
 
 export const metadata: Metadata = {
   title: `Diego Artiles - Links Center`,
   description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
   icons: {
-    icon: "https://dartiles.link/favicon.png",
+    icon: 'https://dartiles.link/favicon.png'
   },
   openGraph: {
-    type: "website",
-    url: "https://dartiles.link",
+    type: 'website',
+    url: 'https://dartiles.link',
     title: `Diego Artiles - Links Center`,
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: "https://dartiles.link/cover.png",
-      },
-    ],
+        url: 'https://dartiles.link/cover.png'
+      }
+    ]
   },
   twitter: {
-    card: "summary_large_image",
-    site: "https://dartiles.link",
+    card: 'summary_large_image',
+    site: 'https://dartiles.link',
     title: `Diego Artiles - Links Center`,
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: "https://dartiles.link/cover.png",
-      },
-    ],
-  },
+        url: 'https://dartiles.link/cover.png'
+      }
+    ]
+  }
 };
 
-async function getLinks() {
-  const res = await fetch("http://localhost:3000/links");
+async function getData () {
+  const res = await fetch(getAbsoluteUrl('links'));
   const data = await res.json();
 
   return data;
 }
 
-export default async function Page() {
-  const links = await getLinks();
+export default async function Page () {
+  const links = await getData();
 
   return <RootComponent links={links} />;
 }

@@ -1,18 +1,20 @@
-import PlausibleProvider from "next-plausible";
-import { ReactNode } from "react";
-import { Providers } from "./providers";
-import "./globals.css";
+import PlausibleProvider from 'next-plausible';
+import { ReactNode } from 'react';
+import Providers from './providers.tsx';
+import './globals.css';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+function RootLayout ({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <PlausibleProvider
-          children={null}
           domain="dartiles.link"
           trackOutboundLinks
-          enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === "production"}
-        />
+          enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'}
+        >
+          {' '}
+          {/* Plausible has the children prop as required */}
+        </PlausibleProvider>
       </head>
       <body>
         <Providers>
@@ -24,3 +26,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
+export default RootLayout;
