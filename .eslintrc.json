@@ -1,36 +1,24 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "airbnb-standard"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".ts",
-          ".tsx",
-          ".js",
-          ".jsx"
-        ]
-      }
+    "extends": [
+        "plugin:astro/recommended"
     ],
-    "import/prefer-default-export": "off"
-  },
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "out/",
-    "public/",
-    "astro/"
-  ],
-  "plugins": [
-    "react"
-  ]
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2023
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.astro"
+            ],
+            "parser": "astro-eslint-parser",
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "extraFileExtensions": [
+                    ".astro"
+                ]
+            },
+            "rules": {}
+        }
+    ]
 }

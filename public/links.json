@@ -3,28 +3,28 @@
     "text": "Mail",
     "slug": "mail",
     "href": "mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.link",
-    "icon": "IoMdMail",
+    "icon": "FiMail",
     "primary": true
   },
   {
     "text": "Github",
     "slug": "github",
     "href": "https://github.com/dartilesm",
-    "icon": "SiGithub",
+    "icon": "FiGithub",
     "primary": true
   },
   {
     "text": "LinkedIn",
     "slug": "linkedin",
     "href": "https://linkedin.com/in/dartiles/",
-    "icon": "FaLinkedinIn",
+    "icon": "FiLinkedin",
     "primary": true
   },
   {
     "text": "Twitter",
     "slug": "twitter",
     "href": "https://twitter.com/intent/follow?screen_name=dartilesm",
-    "icon": "SiTwitter",
+    "icon": "FiTwitter",
     "primary": true
   },
   {
@@ -52,7 +52,7 @@
     "text": "Platzi",
     "slug": "platzi",
     "href": "https://platzi.com/p/dartiles",
-    "icon": "SiPlatzi"
+    "icon": "FiLink"
   },
   {
     "text": "Workana",
