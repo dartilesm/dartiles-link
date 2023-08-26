@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import RootComponent from '../src/components/root.tsx';
 import getAbsoluteUrl from '../src/utils/get-absolute-url.ts';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   metadataBase: new URL(getAbsoluteUrl()),
   title: `Diego Artiles - Links Center`,
