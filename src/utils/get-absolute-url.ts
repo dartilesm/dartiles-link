@@ -8,7 +8,7 @@ function getServerUrl () {
   return `${protocol}://${host}`;
 }
 
-export default function getAbsoluteUrl (path: string) {
+export default function getAbsoluteUrl (path: string = '') {
   const baseURL = IS_SERVER
     ? getServerUrl()
     : window.location.origin;

@@ -3,10 +3,11 @@ import RootComponent from '../src/components/root.tsx';
 import getAbsoluteUrl from '../src/utils/get-absolute-url.ts';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getAbsoluteUrl()),
   title: `Diego Artiles - Links Center`,
   description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
   icons: {
-    icon: 'https://dartiles.link/favicon.png'
+    icon: 'favicon.png'
   },
   openGraph: {
     type: 'website',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: 'https://dartiles.link/cover.png'
+        url: 'cover.png'
       }
     ]
   },
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     description: `Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.`,
     images: [
       {
-        url: 'https://dartiles.link/cover.png'
+        url: 'cover.png'
       }
     ]
   }
