@@ -1,0 +1,56 @@
+--- 
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const { url } = Astro;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="diego artiles, diego, artiles, software engineer, software, engineer, developer, web developer, web, developer, frontend, frontend developer, frontend engineer, fullstack, fullstack developer, fullstack engineer, fullstack engineer, fullstack web developer, fullstack web engineer, fullstack web developer, fullstack web engineer, fullstack software developer, fullstack software, react developer, react, svelte developer, svelte, astro, astro developer" /> 
+		<link rel="icon" href="/favicon.webp" />
+		<title>{title}</title>
+
+		<!-- Opengraph meta tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content={`${url}/cover.webp`} />
+
+		<!-- Twitter meta tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content={url} />
+		<meta name="twitter:creator" content="Diego Artiles" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={`${url}/cover.webp`} />
+	</head>
+	<body class="text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-[#121212] min-h-[100dvh] min-h-screen">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151A;
+		background-size: 224px;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

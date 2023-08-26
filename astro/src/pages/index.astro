@@ -1,0 +1,14 @@
+---
+import Main from '@/components/main';
+import Layout from '../layouts/Layout.astro';
+import type { Link } from '@/types/link';
+
+const linksResponse = await fetch(`${Astro.url}/links.json`);
+const links = await linksResponse.json() as Link[];
+---
+
+<Layout title="Diego Artiles - Links Center" description="Find all links of Diego Artiles in a single place. Social media, portfolio, blog, resume, educative platforms, mail, and more.">
+	<main>
+		<Main client:visible links={links} />
+	</main>
+</Layout>
