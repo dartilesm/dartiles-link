@@ -11,5 +11,10 @@ export default defineConfig({
   redirects: linkRedirects,
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    imagesConfig: {
+      sizes: [208, 40],
+      formats: ["image/webp"],
+    }
+  })
 });
