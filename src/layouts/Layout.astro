@@ -32,6 +32,25 @@ const { url } = Astro;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={`${url}/cover.webp`} />
+
+		<script is:inline>
+			{
+			  const root = document.documentElement;
+			  const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
+		  
+			  let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
+		  
+			  mediaQueryDark.addEventListener('change', (event) => {
+				colorMode = event.matches ? 'dark' : 'light';
+				localStorage.setItem('colorMode', colorMode);
+				root.classList.toggle('dark', colorMode === 'dark');
+			  });
+			  
+			  const savedColorMode = localStorage.getItem('colorMode') || colorMode;
+		  
+			  root.classList.toggle('dark', savedColorMode === 'dark');
+			}
+		</script>
 	</head>
 	<body class="text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-[#121212] min-h-[100dvh] min-h-screen">
 		<slot />
