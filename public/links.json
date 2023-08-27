@@ -3,6 +3,7 @@
     "text": "Mail",
     "slug": "mail",
     "href": "mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.link",
+    "absoluteUrl": true,
     "icon": "MailIcon",
     "primary": true
   },

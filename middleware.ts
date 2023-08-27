@@ -2,7 +2,6 @@ import links from './public/links.json'
 
 export const config = {
     matcher: [
-        "/mail",
         "/github",
         "/linkedin",
         "/twitter",

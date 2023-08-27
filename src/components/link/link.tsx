@@ -7,6 +7,8 @@ import type { IconType } from "react-icons";
 function Link({
   text,
   slug,
+  href,
+  absoluteUrl,
   primary,
   highlight,
   icon: Icon,
@@ -16,7 +18,7 @@ function Link({
       <Button
         as={NextUILink}
         isExternal
-        href={`/${slug}`}
+        href={absoluteUrl ? href : `/${slug}`}
         color={highlight ? "primary" : "default"}
         className='font-medium flex flex-row justify-between text-gray-900 dark:text-gray-100'
         size='lg'
@@ -42,7 +44,7 @@ function Link({
     <Button
       as={NextUILink}
       isExternal
-      href={`/${slug}`}
+      href={absoluteUrl ? href : `/${slug}`}
       isIconOnly
       className='font-medium dark:bg-[#1c1c1c] rounded-full'
       aria-label='text'
