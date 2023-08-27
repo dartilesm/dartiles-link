@@ -1,7 +1,7 @@
 import links from '@/public/links.json'
 
 export const config = {
-    matcher: '^\/(mail|github|linkedin|twitter|cv|portfolio|blog|platzi|workana)$',
+    matcher: ['/((mail|github|linkedin|twitter|cv|blog|platzi|workana).*)']
 }
 
 export default function middleware(request: Request) {
