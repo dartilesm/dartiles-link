@@ -1,0 +1,18 @@
+<script is:inline>
+    {
+      const root = document.documentElement;
+      const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)');
+  
+      let colorMode = mediaQueryDark.matches ? 'dark' : 'light';
+  
+      mediaQueryDark.addEventListener('change', (event) => {
+        colorMode = event.matches ? 'dark' : 'light';
+        localStorage.setItem('colorMode', colorMode);
+        root.classList.toggle('dark', colorMode === 'dark');
+      });
+      
+      const savedColorMode = localStorage.getItem('colorMode') || colorMode;
+  
+      root.classList.toggle('dark', savedColorMode === 'dark');
+    }
+</script>
