@@ -5,6 +5,5 @@ import linkRedirects from './src/utils/link-redirects';
 
 /** @type {import('astro').AstroUserConfig} */
 export default defineConfig({
-  redirects: linkRedirects,
   integrations: [tailwind(), react()],
 });
