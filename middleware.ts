@@ -1,4 +1,4 @@
-import links from '@/public/links.json'
+import links from './public/links.json'
 
 export const config = {
     matcher: [
