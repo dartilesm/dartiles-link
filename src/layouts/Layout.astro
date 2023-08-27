@@ -24,7 +24,7 @@ const { url } = Astro;
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content={`${url}/cover.webp`} />
+		<meta property="og:image" content={new URL('cover.webp', url)} />
 
 		<!-- Twitter meta tags -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@ const { url } = Astro;
 		<meta name="twitter:creator" content="Diego Artiles" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={`${url}/cover.webp`} />
+		<meta name="twitter:image" content={new URL('cover.webp', url)} />
 
 		<ColorMode />
 		<script defer data-domain="dartiles.link" src="/stats/js/script.outbound-links.js" data-api="/stats/api/event"></script>
