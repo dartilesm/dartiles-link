@@ -1,7 +1,9 @@
 import links from '@/public/links.json'
 
+const paths = links.map(link => `/${link.slug}`)
+
 export const config = {
-    matcher: links.map(link => `/${link.slug}`)
+    matcher: paths
 }
 
 export default function middleware(request: Request) {
