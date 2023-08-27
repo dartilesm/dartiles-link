@@ -7,18 +7,19 @@ function TwitterIcon({ size, title, color, className }: Icon = {}) {
       style={{
         color,
       }}
-      xmlns='http://www.w3.org/2000/svg'
       width={size || "1em"}
       height={size || "1em"}
-      fill='none'
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth='2'
-      viewBox='0 0 24 24'
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 256 256'
     >
       {title && <title>{title}</title>}
-      <path d='M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z'></path>
+      <path
+        fill={color || "currentColor"}
+        strokeMiterlimit='10'
+        strokeWidth='1'
+        d='M.219 2.882l34.748 46.461L0 87.118h7.87l30.614-33.073 24.735 33.073H90L53.297 38.043 85.844 2.882h-7.87L49.781 33.341 27.001 2.882H.219zm11.574 5.797h12.303L78.425 81.32H66.122L11.793 8.679z'
+        transform='matrix(2.81 0 0 2.81 1.407 1.407)'
+      />
     </svg>
   );
 }
