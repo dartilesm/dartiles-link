@@ -1,5 +1,7 @@
 --- 
 import ColorMode from '@/components/scripts/color-mode.astro';
+import Plausible from '@/scripts/plausible.astro';
+
 interface Props {
 	title: string;
 	description: string;
@@ -35,7 +37,7 @@ const { url } = Astro;
 		<meta name="twitter:image" content={new URL('cover.webp', url)} />
 
 		<ColorMode />
-		<script defer data-domain="dartiles.link" src="/stats/js/script.outbound-links.js" data-api="/stats/api/event"></script>
+		<Plausible />
 	</head>
 	<body class="text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-[#121212] min-h-[100dvh] min-h-screen">
 		<slot />
