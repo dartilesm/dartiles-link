@@ -1,0 +1,13 @@
+<script>
+  const root = document.documentElement;
+  const mediaQueryDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  let colorMode = mediaQueryDark.matches ? "dark" : "light";
+
+  mediaQueryDark.addEventListener("change", (event) => {
+    colorMode = event.matches ? "dark" : "light";
+    root.classList.toggle("dark", colorMode === "dark");
+  });
+
+  root.classList.toggle("dark", colorMode === "dark");
+</script>

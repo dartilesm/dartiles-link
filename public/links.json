@@ -1,0 +1,64 @@
+[
+  {
+    "text": "Mail",
+    "slug": "mail",
+    "href": "mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.link",
+    "absoluteUrl": true,
+    "icon": "MailIcon",
+    "primary": true
+  },
+  {
+    "text": "Github",
+    "slug": "github",
+    "href": "https://github.com/dartilesm",
+    "icon": "GithubIcon",
+    "primary": true
+  },
+  {
+    "text": "LinkedIn",
+    "slug": "linkedin",
+    "href": "https://linkedin.com/in/dartiles/",
+    "icon": "LinkedInIcon",
+    "primary": true
+  },
+  {
+    "text": "Twitter",
+    "slug": "twitter",
+    "href": "https://twitter.com/intent/follow?screen_name=dartilesm",
+    "icon": "TwitterIcon",
+    "primary": true
+  },
+  {
+    "text": "Resume",
+    "slug": "cv",
+    "href": "https://dartiles.me/cv.pdf",
+    "icon": "LinkIcon",
+    "highlight": true
+  },
+  {
+    "text": "Portfolio",
+    "slug": "portfolio",
+    "href": "https://dartiles.me",
+    "icon": "LinkIcon",
+    "highlight": true
+  },
+  {
+    "text": "Blog",
+    "slug": "blog",
+    "href": "https://dartiles.dev",
+    "icon": "LinkIcon",
+    "highlight": true
+  },
+  {
+    "text": "Platzi",
+    "slug": "platzi",
+    "href": "https://platzi.com/p/dartiles",
+    "icon": "LinkIcon"
+  },
+  {
+    "text": "Workana",
+    "slug": "workana",
+    "href": "https://www.workana.com/freelancer/b4aebd5f18465eb956a6404f3f3d5995",
+    "icon": "LinkIcon"
+  }
+]
