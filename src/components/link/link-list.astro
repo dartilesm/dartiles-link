@@ -1,0 +1,30 @@
+---
+import * as Icons from "@/components/icons";
+import Link from "@/components/link/link.astro";
+import links from "@/public/links.json";
+---
+
+<div class='flex flex-col max-w-sm w-full p-4 gap-4'>
+  {
+    links.some((link) => !link.primary) && (
+      <div class='flex flex-col gap-3 w-full'>
+        {links
+          .filter((link) => !link.primary)
+          .map((link) => (
+            <Link {...link} icon={Icons[link.icon as keyof typeof Icons]} />
+          ))}
+      </div>
+    )
+  }
+  {
+    links.some((link) => link.primary) && (
+      <div class='flex flex-row w-full justify-center gap-2'>
+        {links
+          .filter((link) => link.primary)
+          .map((link) => (
+            <Link {...link} icon={Icons[link.icon as keyof typeof Icons]} />
+          ))}
+      </div>
+    )
+  }
+</div>
