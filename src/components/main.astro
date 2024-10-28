@@ -1,16 +1,38 @@
 ---
-import { Avatar, Image } from "@nextui-org/react";
+import { Avatar, Image, Button, Link } from "@nextui-org/react";
 import LinkList from "@/components/link/link-list.astro";
+import MakifyLogo from "../../public/makify-logo.svg?raw";
+import { ExternalLinkIcon } from "@/components/icons";
 ---
 
 <div class='min-h-screen flex-1 flex flex-col justify-center items-center px-0 py-16 gap-6'>
-  <div class='relative my-8 mx-0 flex justify-center items-center'>
+  <div class='relative'>
+    <span
+      class='animate-ping absolute inline-flex h-3 w-3 rounded-full bg-secondary opacity-75 z-10 -top-1 -right-0.5'
+    ></span>
+    <span class='absolute inline-flex rounded-full h-3 w-3 bg-secondary z-20 -top-1 -right-0.5'
+    ></span>
+    <Button
+      className='relative bg-gradient-to-tr from-blue-900 to-purple-900 text-white shadow-lg font-medium flex flex-row justify-between [&>svg]:w-5 [&>svg]:h-5 [&>svg>*]:fill-current items-center'
+      variant='flat'
+      as={Link}
+      isExternal
+      href='https://x.com/intent/follow?screen_name=makifyapp'
+    >
+      <Fragment set:html={MakifyLogo} />
+      Working on Makify
+      <span class='inline-flex flex-row gap-2 items-center'>
+        <ExternalLinkIcon size={14} />
+      </span>
+    </Button>
+  </div>
+  <div class='relative mx-0 flex justify-center items-center h-72 aspect-square'>
     <Avatar isBordered src='/me.webp' className='w-52 h-52 text-large' client:only />
     <Image
       alt='dartiles logo'
       src='/logo.webp'
       removeWrapper
-      className='absolute m-0 z-50 -bottom-4 p-2 rounded-full w-10 h-10 bg-white border-2 border-solid'
+      className='absolute m-0 z-50 bottom-4 p-2 rounded-full w-10 h-10 bg-white border-2 border-solid'
       client:only
     />
   </div>
