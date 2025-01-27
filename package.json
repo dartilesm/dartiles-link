@@ -11,14 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^2.3.2",
-    "@astrojs/tailwind": "^4.0.0",
-    "@astrojs/vercel": "^3.8.2",
+    "@astrojs/react": "4.1.6",
+    "@astrojs/tailwind": "5.1.5",
+    "@astrojs/vercel": "8.0.4",
     "@nextui-org/react": "^2.1.6",
     "@react-icons/all-files": "4.1.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^3.0.2",
+    "astro": "5.1.9",
     "framer-motion": "^10.16.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

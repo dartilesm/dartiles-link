@@ -5,11 +5,6 @@ const HOST_NAME = import.meta.env.VERCEL_PROJECT_PRODUCTION_URL || "dartiles.lin
 export const onRequest = defineMiddleware(async (context, next) => {
   const userAgent = context.request.headers.get("User-Agent");
   const url = context.url.toString();
-  console.log({
-    url,
-    HOST_NAME,
-    userAgent,
-  });
 
   if (!userAgent?.includes("vercel") && url.includes(HOST_NAME)) {
     const data = {
