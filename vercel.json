@@ -1,0 +1,49 @@
+{
+    "redirects": [
+        {
+            "source": "/mail",
+            "destination": "mailto:diego@dartiles.dev?subject=Quisiera ponerme en contacto contigo - dartiles.link",
+            "permanent": true
+        },
+        {
+            "source": "/github",
+            "destination": "https://github.com/dartilesm",
+            "permanent": true
+        },
+        {
+            "source": "/linkedin",
+            "destination": "https://linkedin.com/in/dartiles/",
+            "permanent": true
+        },
+        {
+            "source": "/twitter",
+            "destination": "https://twitter.com/intent/follow?screen_name=dartilesm",
+            "permanent": true
+        },
+        {
+            "source": "/cv",
+            "destination": "https://docs.google.com/document/d/19sxDgASavnNIYTzJZtYwTPczmI-se9nL8Erb8VUZWxw/edit?usp=sharing",
+            "permanent": true
+        },
+        {
+            "source": "/portfolio",
+            "destination": "https://dartiles.me",
+            "permanent": true
+        },
+        {
+            "source": "/blog",
+            "destination": "https://dartiles.dev",
+            "permanent": true
+        },
+        {
+            "source": "/platzi",
+            "destination": "https://platzi.com/p/dartiles",
+            "permanent": true
+        },
+        {
+            "source": "/workana",
+            "destination": "https://www.workana.com/freelancer/b4aebd5f18465eb956a6404f3f3d5995",
+            "permanent": true
+        }
+    ]
+}

@@ -1,18 +1,17 @@
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from 'astro/config';
-import linkRedirects from './src/utils/link-redirects';
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 /** @type {import('astro').AstroUserConfig} */
 
 // https://astro.build/config
 export default defineConfig({
-  redirects: linkRedirects,
   integrations: [tailwind(), react()],
   output: "server",
   adapter: vercel({
     imagesConfig: {
+      domains: ["dartiles.me"],
       sizes: [208, 40],
       formats: ["image/webp"],
     }
