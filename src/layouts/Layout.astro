@@ -1,6 +1,5 @@
 ---
 import ColorMode from "@/components/scripts/color-mode.astro";
-import Plausible from "@/scripts/plausible.astro";
 
 interface Props {
   title: string;
@@ -41,9 +40,6 @@ const { url } = Astro;
     <meta name='twitter:image' content={new URL("cover.webp", url)} />
 
     <ColorMode />
-    <Plausible />
-    <script defer src='/js/pirsch.js' id='pianjs' data-code='FqDKrTwn2LnTgJVLOxLkMGKq75ioz2JM'
-    ></script>
   </head>
   <body
     class='text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-[#121212] min-h-[100dvh] min-h-screen'
