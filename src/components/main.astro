@@ -1,5 +1,5 @@
 ---
-import { Avatar, Image, Button, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import LinkList from "@/components/link/link-list.astro";
 import BytebuzzLogo from "../../public/bytebuzz-logo.svg?raw";
 import { ExternalLinkIcon } from "@/components/icons";
@@ -28,13 +28,19 @@ import { ExternalLinkIcon } from "@/components/icons";
     </Button>
   </div>
   <div class='relative mx-0 flex justify-center items-center h-72 aspect-square'>
-    <Avatar isBordered src='/me.webp' className='w-52 h-52 text-large' client:only />
-    <Image
-      alt='dartiles logo'
+    <img
+      src='/me.webp'
+      alt='Diego Artiles'
+      width='208'
+      height='208'
+      class='w-52 h-52 rounded-full object-cover ring-2 ring-default ring-offset-2 ring-offset-[#0d1a36]'
+    />
+    <img
       src='/logo.webp'
-      removeWrapper
-      className='absolute m-0 z-50 bottom-4 p-2 rounded-full w-10 h-10 bg-white border-2 border-solid'
-      client:only
+      alt='dartiles logo'
+      width='40'
+      height='40'
+      class='absolute m-0 z-50 bottom-4 rounded-full w-10 h-10 bg-white border-2 border-solid object-cover p-1'
     />
   </div>
   <div class='flex gap-2 flex-col'>
