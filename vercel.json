@@ -29,21 +29,6 @@
             "source": "/portfolio",
             "destination": "https://dartiles.me",
             "permanent": true
-        },
-        {
-            "source": "/blog",
-            "destination": "https://dartiles.dev",
-            "permanent": true
-        },
-        {
-            "source": "/platzi",
-            "destination": "https://platzi.com/p/dartiles",
-            "permanent": true
-        },
-        {
-            "source": "/workana",
-            "destination": "https://www.workana.com/freelancer/b4aebd5f18465eb956a6404f3f3d5995",
-            "permanent": true
         }
     ]
 }

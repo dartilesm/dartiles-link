@@ -11,6 +11,13 @@ module.exports = {
 	},
 	darkMode: 'class',
 	plugins: [nextui({
+		layout: {
+			radius: {
+				small: "9999px",
+				medium: "9999px",
+				large: "9999px",
+			},
+		},
 		themes: {
 			light: {
 				colors: {

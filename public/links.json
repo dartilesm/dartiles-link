@@ -29,6 +29,30 @@
     "primary": true
   },
   {
+    "text": "Instagram",
+    "slug": "instagram",
+    "href": "https://www.instagram.com/dartiles.dev/",
+    "absoluteUrl": true,
+    "icon": "InstagramIcon",
+    "primary": true
+  },
+  {
+    "text": "Threads",
+    "slug": "threads",
+    "href": "https://www.threads.com/@dartiles.dev",
+    "absoluteUrl": true,
+    "icon": "ThreadsIcon",
+    "primary": true
+  },
+  {
+    "text": "Bytebuzz",
+    "slug": "bytebuzz",
+    "href": "https://bytebuzz.dev/@dartilesm",
+    "absoluteUrl": true,
+    "icon": "BytebuzzIcon",
+    "primary": true
+  },
+  {
     "text": "Resume",
     "slug": "cv",
     "href": "https://docs.google.com/document/d/19sxDgASavnNIYTzJZtYwTPczmI-se9nL8Erb8VUZWxw/edit?usp=sharing",
@@ -41,24 +65,5 @@
     "href": "https://dartiles.me",
     "icon": "LinkIcon",
     "highlight": true
-  },
-  {
-    "text": "Blog",
-    "slug": "blog",
-    "href": "https://dartiles.dev",
-    "icon": "LinkIcon",
-    "highlight": true
-  },
-  {
-    "text": "Platzi",
-    "slug": "platzi",
-    "href": "https://platzi.com/p/dartiles",
-    "icon": "LinkIcon"
-  },
-  {
-    "text": "Workana",
-    "slug": "workana",
-    "href": "https://www.workana.com/freelancer/b4aebd5f18465eb956a6404f3f3d5995",
-    "icon": "LinkIcon"
   }
 ]
