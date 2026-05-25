@@ -1,6 +1,6 @@
 ---
 import * as Icons from "@/components/icons";
-import Link from "@/components/link/link.astro";
+import { LinkButton } from "@/components/link/link-button";
 import links from "@/public/links.json";
 ---
 
@@ -11,7 +11,12 @@ import links from "@/public/links.json";
         {links
           .filter((link) => !link.primary)
           .map((link) => (
-            <Link {...link} icon={Icons[link.icon as keyof typeof Icons]} />
+            <LinkButton
+              href={link.absoluteUrl ? link.href : `/${link.slug}`}
+              text={link.text}
+              icon={Icons[link.icon as keyof typeof Icons]}
+              highlight={link.highlight}
+            />
           ))}
       </div>
     )
@@ -22,7 +27,12 @@ import links from "@/public/links.json";
         {links
           .filter((link) => link.primary)
           .map((link) => (
-            <Link {...link} icon={Icons[link.icon as keyof typeof Icons]} />
+            <LinkButton
+              href={link.absoluteUrl ? link.href : `/${link.slug}`}
+              text={link.text}
+              icon={Icons[link.icon as keyof typeof Icons]}
+              primary
+            />
           ))}
       </div>
     )

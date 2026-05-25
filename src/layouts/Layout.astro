@@ -1,4 +1,5 @@
 ---
+import "@/styles/global.css";
 import ColorMode from "@/components/scripts/color-mode.astro";
 import DarkHorizonGlow from "@/components/background/dark-horizon-glow.astro";
 
@@ -41,15 +42,8 @@ const { url } = Astro;
     <meta name='twitter:image' content={new URL("cover.webp", url)} />
 
     <ColorMode />
-    <style is:global>
-      [data-slot="base"].rounded-full,
-      a[data-slot="base"],
-      button[data-slot="base"] {
-        border-radius: 9999px;
-      }
-    </style>
   </head>
-  <body class='text-gray-100 min-h-[100dvh] min-h-screen bg-[#0d1a36]'>
+  <body class='min-h-[100dvh] min-h-screen bg-background text-foreground'>
     <DarkHorizonGlow>
       <slot />
     </DarkHorizonGlow>
