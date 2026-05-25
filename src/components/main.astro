@@ -19,11 +19,17 @@ import { cn } from "@/lib/utils";
       rel='noopener noreferrer'
       class={cn(
         buttonVariants({ size: "lg" }),
-        "relative bg-gradient-to-tr from-blue-900 to-purple-900 text-white shadow-lg font-medium flex flex-row justify-between items-center gap-2 rounded-full h-10 px-6 hover:opacity-90 [&_svg]:size-5 [&_svg]:shrink-0 [&>svg]:w-5 [&>svg]:h-5 [&>svg>*]:fill-current",
+        "relative bg-linear-to-tr from-blue-900 to-purple-900 text-white shadow-lg font-medium inline-flex flex-row items-center gap-2 justify-between rounded-full h-10 px-4 hover:opacity-90",
       )}
     >
-      <Fragment set:html={BytebuzzLogo} />
-      Building ByteBuzz
+      <span class='inline-flex flex-row items-center gap-1'>
+        <span
+          class='inline-flex items-center size-5 shrink-0 [&_svg]:size-full **:fill-current'
+          set:html={BytebuzzLogo}
+          aria-hidden='true'
+        />
+        Building ByteBuzz
+      </span>
       <ExternalLinkIcon size={14} className='size-3.5 shrink-0' />
     </a>
   </div>
@@ -45,7 +51,9 @@ import { cn } from "@/lib/utils";
   </div>
   <div class='flex gap-2 flex-col'>
     <h1 class='text-4xl text-center'>Diego Artiles</h1>
-    <h2 class='text-base sm:text-lg text-center text-balance max-w-sm px-4'>
+    <h2
+      class='text-base sm:text-lg text-center text-balance max-w-sm px-4 text-muted-foreground/80'
+    >
       Senior frontend dev · building Bytebuzz · sharing what I learn
     </h2>
   </div>

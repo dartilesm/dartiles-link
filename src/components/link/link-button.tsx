@@ -6,7 +6,7 @@ import type { Icon } from "@/types/icon";
 import { cn } from "@/lib/utils";
 
 const pillLinkClass =
-  "h-12 w-full rounded-full px-6 font-medium flex flex-row items-center justify-between text-foreground [&_svg]:size-5 [&_svg]:shrink-0";
+  "h-12 w-full rounded-full px-6 font-medium flex flex-row items-center justify-between text-foreground [&_svg]:shrink-0";
 
 interface LinkButtonProps {
   href: string;
@@ -32,7 +32,7 @@ export function LinkButton({
         aria-label={text}
         className={cn(
           buttonVariants({ variant: "secondary", size: "icon" }),
-          "rounded-full bg-[#1c1c1c] text-foreground hover:bg-[#1c1c1c]/90 size-10 [&_svg]:size-5 [&_svg]:shrink-0",
+          "rounded-full bg-[#1c1c1c] text-foreground hover:bg-[#1c1c1c]/90 size-10",
         )}
       >
         <Icon size={20} className="size-5 shrink-0" />
